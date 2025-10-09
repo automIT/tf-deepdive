@@ -1,0 +1,27 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "platform": "local",
+  "onboarding": false,
+  "dependencyDashboard": false,
+  "requireConfig": "optional",
+
+  "enabledManagers": ["terraform"],
+  "ignorePaths": ["**/.terraform/**", "**/.terragrunt-cache/**"],
+  "terraform": {
+    "lockFileMaintenance": { "enabled": false }
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["required_version"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["hashicorp/azurerm"],
+      "rangeStrategy": "widen"
+    }
+  ],
+  "logContext": "renovate-local"
+}
