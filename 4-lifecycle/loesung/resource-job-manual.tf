@@ -43,7 +43,7 @@ resource "azurerm_container_app_job" "manual_job" {
   }
 
   lifecycle {
-    #ignore_changes = [template.0.container.0.env]
+    ignore_changes = [template.0.container.0.env]
     precondition {
       condition     = var.environment_variables["CanChangeMe"].value != ""
       error_message = "The 'CanChangeMe' environment variable cannot be empty."

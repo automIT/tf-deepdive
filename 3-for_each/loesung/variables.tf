@@ -54,7 +54,7 @@ variable "container_names" {
   type        = list(string)
   validation {
     condition     = contains(var.container_names, "manual-job") || contains(var.container_names, "event-job")
-    error_message = "Container names must include 'manual-job' and 'event-job'."
+    error_message = "Container names must include 'manual-job' or 'event-job'."
   }
 }
 

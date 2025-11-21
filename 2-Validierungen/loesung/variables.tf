@@ -44,8 +44,8 @@ variable "secret_name" {
   type        = string
   default     = "azure-storage-connection-string"
   validation {
-    condition     = can(regex("^[a-z0-9-]+$", var.secret_name))
-    error_message = "The secret_name variable must be lowercase and can only contain \"-\"."
+    condition     = can(regex("^[a-z-]+$", var.secret_name))
+    error_message = "The secret_name variable must only contain lowercase letters and hyphens (-)."
   }
 }
 
