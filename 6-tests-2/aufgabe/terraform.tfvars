@@ -1,6 +1,0 @@
-subscription_id  = "f4d51eb3-2c3b-4728-a0f4-2d06e1169485"
-acr_id           = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshop19/providers/Microsoft.ContainerRegistry/registries/automitaitest"
-rg_name          = "autworkshop19"
-storage_name     = "autworkshop1901"
-registry_name    = "automittrain1"
-rg_registry_name = "already-existing-rg"
