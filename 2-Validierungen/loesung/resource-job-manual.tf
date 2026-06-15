@@ -18,7 +18,7 @@ resource "azurerm_container_app_job" "manual_job" {
       memory = "0.5Gi"
       env {
        name = "AZURE_STORAGE_CONNECTION_STRING"
-       secret_name = "azure-storage-connection-string"
+       secret_name = var.secret_name
       }
       env {
         name = "AZURE_STORAGE_CONTAINER_NAME"
