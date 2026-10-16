@@ -1,1 +1,1 @@
-resource_group_name = "autworkshop20"
+resource_group_name = "autworkshopdeep10"

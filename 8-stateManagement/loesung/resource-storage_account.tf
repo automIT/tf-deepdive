@@ -27,10 +27,10 @@ resource "azurerm_storage_container" "container" {
 
 #import {
 #  to = azurerm_storage_container.container
-#  id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshop20/providers/Microsoft.Storage/storageAccounts/autworkshop2005/blobServices/default/containers/der-manuel-container"
+#  id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshopdeep10/providers/Microsoft.Storage/storageAccounts/autworkshopdeep1005/blobServices/default/containers/der-manuel-container"
 #}
 
 # import {
 #   to = azurerm_storage_container.container["event-job"]
-#   id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshop20/providers/Microsoft.Storage/storageAccounts/autworkshop2005/blobServices/default/containers/event-job"
+#   id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshopdeep10/providers/Microsoft.Storage/storageAccounts/autworkshopdeep1005/blobServices/default/containers/event-job"
 # }
