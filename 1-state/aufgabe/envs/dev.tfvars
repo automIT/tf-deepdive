@@ -1,1 +1,3 @@
-resource_group_name = "autworkshopdeep10"
+# resource_group_name is derived from ../../participant.yaml.
+# Only override it here if needed:
+# resource_group_name = "autworkshopdeepXX"

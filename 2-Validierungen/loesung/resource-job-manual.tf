@@ -34,11 +34,11 @@ resource "azurerm_container_app_job" "manual_job" {
 
   identity {
     type         = "UserAssigned"
-    identity_ids = [azurerm_user_assigned_identity.container_identity.id]
+    identity_ids = [data.azurerm_user_assigned_identity.container_identity.id]
   }
 
   registry {
     server   = data.azurerm_container_registry.train.login_server
-    identity = azurerm_user_assigned_identity.container_identity.id
+    identity = data.azurerm_user_assigned_identity.container_identity.id
   }
 }

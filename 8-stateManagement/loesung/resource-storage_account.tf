@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "containerstorage" {
-  name                     = var.storage_name
+  name                     = local.storage_name
   resource_group_name      = data.azurerm_resource_group.rg.name
   location                 = data.azurerm_resource_group.rg.location
   account_tier             = "Standard"
@@ -27,10 +27,10 @@ resource "azurerm_storage_container" "container" {
 
 #import {
 #  to = azurerm_storage_container.container
-#  id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshopdeep10/providers/Microsoft.Storage/storageAccounts/autworkshopdeep1005/blobServices/default/containers/der-manuel-container"
+#  id = "${data.azurerm_resource_group.rg.id}/providers/Microsoft.Storage/storageAccounts/${local.storage_name}/blobServices/default/containers/der-manuel-container"
 #}
 
 # import {
 #   to = azurerm_storage_container.container["event-job"]
-#   id = "/subscriptions/f4d51eb3-2c3b-4728-a0f4-2d06e1169485/resourceGroups/autworkshopdeep10/providers/Microsoft.Storage/storageAccounts/autworkshopdeep1005/blobServices/default/containers/event-job"
+#   id = "${data.azurerm_resource_group.rg.id}/providers/Microsoft.Storage/storageAccounts/${local.storage_name}/blobServices/default/containers/event-job"
 # }

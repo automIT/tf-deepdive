@@ -4,9 +4,9 @@ variable "subscription_id" {
 }
 
 variable "container_app_env_name" {
-  description = "The name of the Container App Environment"
+  description = "The name of the Container App Environment (default: derived from participant.yaml)"
   type        = string
-  default     = "Schulung-test"
+  default     = null
   
 }
 
@@ -17,15 +17,17 @@ variable "job_name" {
 }
 
 variable "rg_name" {
-  description = "The name of the Resource Group"
+  description = "The name of the Resource Group (default: derived from participant.yaml)"
   type        = string
-  default     = "tf-deepdive-rg"
+  default     = null
 }
 
+# Note: the default is null (the name is derived from participant.yaml).
+# A validation therefore also has to allow var.storage_name == null.
 variable "storage_name" {
-  description = "The name of the Storage Account"
+  description = "The name of the Storage Account (default: derived from participant.yaml)"
   type        = string
-  default     = "tfdeepdivestorage"
+  default     = null
 }
 
 variable "registry_name" {

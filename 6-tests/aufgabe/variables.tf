@@ -5,9 +5,9 @@ variable "subscription_id" {
 }
 
 variable "container_app_env_name" {
-  description = "The name of the Container App Environment"
+  description = "The name of the Container App Environment (default: derived from participant.yaml)"
   type        = string
-  default     = "Schulung-test"
+  default     = null
 
 }
 
@@ -18,17 +18,17 @@ variable "job_name" {
 }
 
 variable "rg_name" {
-  description = "The name of the Resource Group"
+  description = "The name of the Resource Group (default: derived from participant.yaml)"
   type        = string
-  default     = "tf-deepdive-rg"
+  default     = null
 }
 
 variable "storage_name" {
-  description = "The name of the Storage Account"
+  description = "The name of the Storage Account (default: derived from participant.yaml)"
   type        = string
-  default     = "tfdeepdivestorage"
+  default     = null
   validation {
-    condition = length(var.storage_name) >= 3 && length(var.storage_name) <= 24
+    condition     = var.storage_name == null || (length(var.storage_name) >= 3 && length(var.storage_name) <= 24)
     error_message = "The storage_name variable must be between 3 and 24 characters in length."
   }
 }
